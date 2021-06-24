@@ -42,10 +42,10 @@ Data dictionary of the given train dataset Variable Definition
 8. Check status of nginx using
   > sudo service nginx status
 9. commands to start/stop/restart nginx
-  > sudo service nginx start
-  > sudo service nginx stop
-  > sudo service nginx restart
-  > Press q to reactivate the bash prompt
+  * sudo service nginx start
+  * sudo service nginx stop
+  * sudo service nginx restart
+  * Press q to reactivate the bash prompt
 10. Create this file /etc/nginx/sites-available/cclp.conf. The file content looks like this,
   ``` 
   server {
@@ -60,12 +60,12 @@ Data dictionary of the given train dataset Variable Definition
    }
    ```
 11. Remove symlink for default file in /etc/nginx/sites-enabled directory,
-   > sudo unlink default
-   > sudo unlink inside 
+   * sudo unlink default
+   * sudo unlink inside 
 12. Create symlink for this file in /etc/nginx/sites-enabled by running this command, 
    > sudo ln -v -s /etc/nginx/sites-available/cclp.conf inside /etc/nginx/sites-enabled
 13. Restart Nginx and again check the status
 14. Now install python packages as we have a blank machine so we needs to install all the packages which we are using in code and then start flask server
-   > sudo pip3 install packages-names
-   > python3 server.py
+   * sudo pip3 install packages-names
+   * python3 server.py
    
