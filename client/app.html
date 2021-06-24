@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Credit card Lead Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+	<link rel="stylesheet" href="app.css"> 
+</head>
+<body>
+<div class="img"></div>
+<form class="form">
+	<h2>Gender</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-gn-0" name="uigender" value="0"/>
+		<label for="radio-gn-0">0(Female)</label>
+		<input type="radio" id="radio-gn-1" name="uigender" value="1" checked/>
+		<label for="radio-gn-1">1(Male)</label>
+	</div>
+
+	<h2>Age</h2>
+    <input class="age"  type="text" id="uiage" class="floatLabel" name="Age" value="73">
+	<h2>Region_code</h2>
+    <input class="rcode"  type="text" id="uircode" class="floatLabel" name="rcode" value="18">
+	<h2>Occupation</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-occ-0" name="uiOccupation" value="0"/>
+		<label for="radio-occ-0">0(entrepreneur)</label>
+		<input type="radio" id="radio-occ-1" name="uiOccupation" value="1" checked/>
+		<label for="radio-occ-1">1(Other)</label>
+		<input type="radio" id="radio-occ-2" name="uiOccupation" value="2" />
+		<label for="radio-occ-2">2(Salaried)</label>
+		<input type="radio" id="radio-occ-3" name="uiOccupation" value="3"/>
+		<label for="radio-occ-3">3(Self_Employed)</label>
+	</div>
+	<h2>Channal_code</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-ccode-0" name="uiccode" value="0"/>
+		<label for="radio-ccode-0">0(X1)</label>
+		<input type="radio" id="radio-ccode-1" name="uiccode" value="1" checked/>
+		<label for="radio-ccode-1">1(X2)</label>
+		<input type="radio" id="radio-ccode-2" name="uiccode" value="2"/>
+		<label for="radio-ccode-2">2(X3)</label>
+		<input type="radio" id="radio-ccode-3" name="uiccode" value="3"/>
+		<label for="radio-ccode-3">3(X4)</label>
+	</div>
+	<div>
+	<h2>Vintage</h2>
+    <input class="Vintage"  type="text" id="uivintage" class="floatLabel" name="vintage" value="43">
+</div>
+<h2>Credit_Product</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-cp-0" name="uicp" value="0"/>
+		<label for="radio-cp-0">0(yes)</label>
+		<input type="radio" id="radio-cp-1" name="uicp" value="1" checked/>
+		<label for="radio-cp-1">1(No)</label>
+	</div>
+<div>
+	<h2>Avg_Account_Balance</h2>
+    <input class="Acc"  type="text" id="uiacc" class="floatLabel" name="acc" value="1022.592783	">
+</div>
+
+<h2>Is_Active</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-act-0" name="uiact" value="0"/>
+		<label for="radio-act-0">0(No)</label>
+		<input type="radio" id="radio-act-1" name="uiact" value="1" checked/>
+		<label for="radio-act-1">1(Yes)</label>
+	</div>
+
+	<button class="submit" onclick="onClickedEstimatePrice()" type="button">Is_Lead</button>
+	<div id="uiEstimatedPrice" class="result">	<h2></h2> </div>
+	
+
+</body>
+</html>
