@@ -59,5 +59,13 @@ Data dictionary of the given train dataset Variable Definition
         }
    }
    ```
-
+11. Remove symlink for default file in /etc/nginx/sites-enabled directory,
+   > sudo unlink default
+   > sudo unlink inside 
+12. Create symlink for this file in /etc/nginx/sites-enabled by running this command, 
+   > sudo ln -v -s /etc/nginx/sites-available/cclp.conf inside /etc/nginx/sites-enabled
+13. Restart Nginx and again check the status
+14. Now install python packages as we have a blank machine so we needs to install all the packages which we are using in code and then start flask server
+   > sudo pip3 install packages-names
+   > python3 server.py
    
