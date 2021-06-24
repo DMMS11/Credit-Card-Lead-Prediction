@@ -51,7 +51,7 @@ Data dictionary of the given train dataset Variable Definition
   server {
     listen 80;
        server_name bhp;
-        root /home/ubuntu/BangloreHomePrices/client;
+        root /home/ubuntu/Credit_card_Lead_prediction/client;
         index app.html;
         location /api/ {
              rewrite ^/api(.*) $1 break;
