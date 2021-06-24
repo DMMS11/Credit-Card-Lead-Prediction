@@ -1,4 +1,5 @@
 # Credit-Card-Lead-Prediction
+# Host Locally as well as on AWS
 
 Predict the lead to cross sell Bnk credit card to it's existing cutomers
 
@@ -25,3 +26,38 @@ Data dictionary of the given train dataset Variable Definition
 * Is_Active: If the Customer is Active in last 3 Months
 
 * Is_Lead(Target): If the Customer is interested for the Credit Card
+
+# Deploy this app to cloud (AWS EC2)
+
+1. Create EC2 instance using amazon console, also in security group add a rule to allow HTTP, HTTPS, and FTP incoming traffic
+2. Now connect to your instance using a command like this, you can find this while Selecting the instance and then click on connect
+> ssh -i ....................................................................................
+3. Download .pem File. This will be your private Keys
+4. Download Git Bash
+5. where you put your .pem key, right click on there and click on "Git bash Here".
+6. Copy the above command (pt no2) and hit Enter
+7. Download Nginx
+  > sudo apt-get update
+  > sudo apt-get install nginx
+8. Check status of nginx using
+  > sudo service nginx status
+9. commands to start/stop/restart nginx
+  > sudo service nginx start
+  > sudo service nginx stop
+  > sudo service nginx restart
+  > Press q to reactivate the bash prompt
+10. Create this file /etc/nginx/sites-available/cclp.conf. The file content looks like this,
+  ``` 
+  server {
+    listen 80;
+       server_name bhp;
+        root /home/ubuntu/BangloreHomePrices/client;
+        index app.html;
+        location /api/ {
+             rewrite ^/api(.*) $1 break;
+             proxy_pass http://127.0.0.1:5000;
+        }
+   }
+   ```
+
+   
